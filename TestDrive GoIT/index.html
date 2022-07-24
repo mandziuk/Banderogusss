@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BanderoGus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/reset.css"> 
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <section class="main_block">
+        <header>
+            <img src="/img/logo.svg" alt="logo" class="logo">
+            <p class="logo_text">Школа підготовки<br> IT-спеціалістів</p>
+        </header>
+        <div class="wrapper_main_section">
+            <div class="main_info">
+                <h4>Доброго вечора, ми з України</h4>
+                
+                <h3>На старт. Увага. Полетіли!</h3>
+                
+                <h1>Бандерогусь</h1>
+
+                <p>Спеціальний бойовий гусак із біолабораторій<br>
+                України. Пишаюся своїми подвигами, бороню<br>
+                Батьківщину та підтримую позитивний дух народу.<br>
+                Слава Україні!</p>
+
+                <button class="btn_launch" id="open-form-modal-btn">Запустити гуся</button>
+            </div>
+            
+            <img src="/img/gus.svg" alt="" class="gus_photo">
+            
+        </div>
+    </section>
+
+    <section class="about_gus">
+        <div class="about_gus_tittle">
+            <img src="/img/trezub.svg" alt="trezub" class="trezub">
+
+            <h2>Цікаві факти про бандерогусей</h2>
+            <p>Зазвичай бандерогуси — виключно мирні птахи. Але у разі небезпеки можуть атакувати ворога<br>
+            системою надпотужного озброєння. Також нищать психологічно, активуючи високочастотне шипіння та<br>
+            розмахування крилами</p>
+        </div>
+
+        <div class="about_gus_items">
+            <div class="gus_item gus_item-1">
+               <img src="/img/gus1.svg" alt=""> 
+               <h3>Система навігації</h3>
+               <p>Супутниковий GPS та<br>
+                ехолокатори розпізнають<br>
+                ворожу техніку навіть на етапі<br>
+                збірки</p>
+            </div>
+            <div class="gus_item gus_item-2">
+                <img src="/img/gus2.svg" alt=""> 
+                <h3>Очі-тепловізори</h3>
+                <p>Допомагають виявити характер<br>
+                сигнатури об’єктів та значноbr
+                підвищують точність удару</p>
+            </div>
+            <div class="gus_item gus_item-3">
+                <img src="/img/gus2.svg" alt=""> 
+                <h3>Байракрила</h3>
+                <p>Можуть нести 2-4 керовані<br>
+                ракети, що вражають ціль на<br>
+                відстані «ніхріна собі» кілометрів</p>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="banderogus_footer">
+            <img src="/img/trezub.svg" alt="trezub" class="trezub">
+
+            <h1>Перемога завжди за нами!</h1>
+            <p>Головна мета бандерогусей — служити гумору та доброті нашого народу. Ми забезпечимо вашу<br> 
+            посмішку у часи, коли вона так необхідна</p>
+        </div>
+    </section>
+
+    <div class="modal-bgd" id="form-modal">
+
+
+
+        <form action="#" class="modal-form">
+            <button class="close-btn"><img src="/img/close_btn.svg" alt=""></button>
+
+            <img src="/img/trezub.svg" alt="" class="form_trezub">
+
+            <h4 class="modal_form_tittle">Поділися, будь ласка, поштою</h4>
+            <p class="modal_form_desc">та запиши гуся до бандерозагону</p>
+
+            <div class="modal_form_field">
+                <label for="form_name" class="modal_field_name">ім’я</label>
+                <input type="text" class="modal_field_input" id="user_name">
+            </div>
+
+            <div class="modal_form_field">
+                <label for="form_email" class="modal_field_name">Email</label>
+                <input type="email" class="modal_field_input" id="user_email">
+            </div>
+
+            <button class="modal_form_button" id="launch-btn">Запустити гуся</button>
+        </form>
+    </div>
+    
+    <div class="modal-bgd" id="success-modal">
+        <div class="modal-form">
+            <button class="close-btn"><img src="/img/close_btn.svg" alt=""></button>
+
+            <img src="/img/trezub.svg" alt="" class="form_trezub">
+
+            <h4 class="modal_form_tittle">Дякуємо, гусь успішно запущений</h4>
+            <p class="modal_form_desc modal_desc">Слава Україні! Героям Слава!</p>
+        </div>
+    </div>
+
+    <script src="/script/form.js"></script>
+</body>
+</html>
