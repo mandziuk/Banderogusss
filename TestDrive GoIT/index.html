@@ -8,31 +8,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/reset.css"> 
     <link rel="stylesheet" href="/style.css">
+    <link rel="preload" href="/img/gus-anim.gif" as="image">
 </head>
 <body>
     <section class="main_block">
-        <header>
-            <img src="/img/logo.svg" alt="logo" class="logo">
-            <p class="logo_text">Школа підготовки<br> IT-спеціалістів</p>
-        </header>
         <div class="wrapper_main_section">
-            <div class="main_info">
-                <h4>Доброго вечора, ми з України</h4>
+            <header>
+                <img src="/img/logo.svg" alt="logo" class="logo">
+                <p class="logo_text">Школа підготовки<br> IT-спеціалістів</p>
+            </header>
+            <div class="main_info_container">
+                <div class="main_info">
+                    <h4>Доброго вечора, ми з України</h4>
                 
-                <h3>На старт. Увага. Полетіли!</h3>
-                
-                <h1>Бандерогусь</h1>
+                    <h3>На старт. Увага. Полетіли!</h3>
 
-                <p>Спеціальний бойовий гусак із біолабораторій<br>
-                України. Пишаюся своїми подвигами, бороню<br>
-                Батьківщину та підтримую позитивний дух народу.<br>
-                Слава Україні!</p>
+                    <h1>Бандерогусь</h1>
 
-                <button class="btn_launch" id="open-form-modal-btn">Запустити гуся</button>
+                    <p>Спеціальний бойовий гусак із біолабораторій<br>
+                    України. Пишаюся своїми подвигами, бороню<br>
+                    Батьківщину та підтримую позитивний дух народу.<br>
+                    Слава Україні!</p>
+
+                    <button class="btn_launch" id="open-form-modal-btn">Запустити гуся</button>
+                </div>
+            
+                <img src="/img/gus.svg" alt="" class="gus_photo">
             </div>
-            
-            <img src="/img/gus.svg" alt="" class="gus_photo">
-            
         </div>
     </section>
 
@@ -82,33 +84,36 @@
     </section>
 
     <div class="modal-bgd" id="form-modal">
+        
 
-
-
-        <form action="#" class="modal-form">
+        <div class="modal-form-container">
             <button class="close-btn"><img src="/img/close_btn.svg" alt=""></button>
+            <form action="#" class="modal-form" data-netlify ="true" id="form">
+                
 
-            <img src="/img/trezub.svg" alt="" class="form_trezub">
+                <img src="/img/trezub.svg" alt="" class="form_trezub">
 
-            <h4 class="modal_form_tittle">Поділися, будь ласка, поштою</h4>
-            <p class="modal_form_desc">та запиши гуся до бандерозагону</p>
+                <h4 class="modal_form_tittle">Поділися, будь ласка, поштою</h4>
+                <p class="modal_form_desc">та запиши гуся до бандерозагону</p>
 
-            <div class="modal_form_field">
-                <label for="form_name" class="modal_field_name">ім’я</label>
-                <input type="text" class="modal_field_input" id="user_name">
-            </div>
+                <div class="modal_form_field">
+                    <label for="form_name" class="modal_field_name">ім’я</label>
+                    <input required type="text" class="modal_field_input" id="user_name" name="ім’я">
+                </div>
 
-            <div class="modal_form_field">
-                <label for="form_email" class="modal_field_name">Email</label>
-                <input type="email" class="modal_field_input" id="user_email">
-            </div>
+                <div class="modal_form_field">
+                    <label for="form_email" class="modal_field_name">Email</label>
+                    <input required type="email" class="modal_field_input" id="user_email" name="Email">
+                </div>
 
-            <button class="modal_form_button" id="launch-btn">Запустити гуся</button>
-        </form>
+                <button class="modal_form_button" id="launch-btn">Запустити гуся</button>
+            </form>
+        </div>
     </div>
     
-    <div class="modal-bgd" id="success-modal">
-        <div class="modal-form">
+    <div class="modal-bgd " id="success-modal">
+
+        <div class="modal-form modal-form-container">
             <button class="close-btn"><img src="/img/close_btn.svg" alt=""></button>
 
             <img src="/img/trezub.svg" alt="" class="form_trezub">

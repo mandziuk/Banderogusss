@@ -7,6 +7,7 @@ const form = document.querySelector('#form');
 const openFormModalBtn = document.querySelector('#open-form-modal-btn');
 const launchBtn = document.querySelector('#launch-btn');
 const closeBtns = document.querySelectorAll('.close-btn');
+ 
 
 openFormModalBtn.addEventListener('click', () => {
     formModal.classList.add(MODAL_ACTIVE_CLASS_NAME);
@@ -32,6 +33,29 @@ closeBtns.forEach(btn => {
     })
 })
 
+function clearFormFields() {
+    const modalFiends = formModal.querySelectorAll('input');
+
+    modalFiends.forEach( field => { 
+        field.value = ''
+    });
+}
+
+function showGooseAnim() {
+    const gusImage = document.createElement('img');
+   
+    gusImage.setAttribute('src', './img/gus-anim.gif');
+    gusImage.classList.add('gus-anim');
+
+    form.appendChild(gusImage);
+
+    setTimeout(() => {
+        gusImage.removeAttribute('src', './img/gus-anim.gif');
+        form.removeChild(gusImage);
+    }, 4000)
+    
+}
+
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -43,9 +67,14 @@ form.addEventListener('submit', e => {
       body: new URLSearchParams(formData).toString(),
     })
       .then(() => {
-        closeFormModal();
-        setTimeout(openSuccessModal, 700);
-        setTimeout(closeSuccessModal, 3000);
+        showGooseAnim();
+
+        setTimeout(() => {
+            closeFormModal();
+            setTimeout(openSuccessModal, 700);
+            setTimeout(closeSuccessModal, 2000);
+            clearFormFields();
+        }, 3000);
       })
       .catch((error) => console.log('Sending form failed'));
 })

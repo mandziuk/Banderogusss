@@ -21,7 +21,6 @@ body {
 header  { 
     margin-top: 32px;
     margin-bottom: 56px;
-    margin-left: 95px;
     display: flex;
     position: absolute;
     top: 0;
@@ -36,18 +35,22 @@ header  {
 }
 
 .wrapper_main_section {
+    width: 1170px;
     margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+
+.main_info_container {
     display: flex;
     justify-content: space-between;
+    height: 100%;
 }
 
 .main_info {
-    background-color: #fff;
     padding-left: 56px;
     padding-right: 56px;
-    margin-left: 95px;
-    margin-right: 52;
-    align-items: flex-start;
+    background-color: #fff;
     align-self: center;
 }
 
@@ -189,7 +192,7 @@ header  {
     color: #1B1D1F;
 }
 
-/* Модальне вікно 1 */
+/* Модальне вікно  */
 
 .modal-bgd {
     width: 100%;
@@ -207,13 +210,18 @@ header  {
     transition: all 0.3s ease-in-out;
 }
 
-.modal-form {
+.modal-form-container {
     background: #fff;
     padding: 32px 92px 60px 92px;
+    position: relative;
+}
+
+.modal-form {
+    
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    
 }    
 
 .form_trezub {
@@ -291,4 +299,13 @@ header  {
     pointer-events: all;
 }
 
-/* Модальне вікно 2 */
+.gus-anim {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin-bottom: auto;
+    margin-top: auto;
+    width: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
